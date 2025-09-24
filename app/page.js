@@ -61,36 +61,36 @@ export default function Home() {
       <div
         onMouseEnter={() => {
           gsap.to('.parts', {
-            x: 130,
+            x: 129,
             duration: 1,
             stagger: 0.2,
             ease: "bounce"
           })
+
+         
         }}
         onMouseLeave={() => {
           gsap.to('.parts', {
-            x: -130,
+            x: -131 ,
             duration: 1,
             stagger: 0.2,
             ease: "bounce"
           })
         }}
-        className=" absolute left-0 bg-amber-100 z-10 top-64">
-        <div className="bg-amber-100 w-12 h-10 relative">
-          <div className="w-10 h-[1px]  bg-black absolute top-[17px] right-2">  </div>
-          <div className="w-5 h-[1px] origin-right -rotate-z-30 right-2 bg-black absolute top-[17px]">  </div>
-          <div className="w-5 h-[1px] origin-right rotate-z-30 right-2 bg-black absolute top-[17px]">  </div>
-
+        className="wrapper fixed left-0 bg-amber-100 z-10 top-64 border border-black border-l-0">
+        <div className="bg-amber-100 w-12 h-10 relative flex flex-col gap-2  justify-center items-center">
+          <div className="w-5 h-[1px] bg-black ">  </div>
+          <div className="w-5 h-[1px] bg-black ">  </div>
         </div>
-        <div className='links  flex flex-col  text-2xl xl:pr-4 absolute z-10 -left-32 ' >
+        <div className='links  flex flex-col  text-2xl xl:pr-4 absolute z-10 -left-33 ' >
           <button onClick={() =>
             gsap.to(window, {
               duration: 1,
-              scrollTo: ".description",
+              scrollTo: ".hero",
               ease: "power2.inOut",
 
             })
-          } className='parts py-3 px-2 bg-amber-100 border-b cursor-pointer  duration-200 transition-all hover:bg-black hover:text-amber-100'>ELARION</button>
+          } className='parts py-3 px-2 text-black bg-amber-100 border-r border-t     border-b cursor-pointer  duration-200 transition-all hover:bg-black hover:text-amber-100'>ELARION</button>
           <button
             onClick={() =>
               gsap.to(window, {
@@ -99,7 +99,7 @@ export default function Home() {
                 ease: "power2.inOut",
 
               })
-            } className='parts py-3 px-2 bg-amber-100 border-b cursor-pointer   hover:bg-black hover:text-amber-100'>LORE</button>
+            } className='parts py-3 px-2 text-black bg-amber-100 border-r border-b cursor-pointer   hover:bg-black hover:text-amber-100'>LORE</button>
           <button
             onClick={() =>
               gsap.to(window, {
@@ -109,9 +109,30 @@ export default function Home() {
 
               })
             }
-            className='parts py-3 px-2 bg-amber-100 border-b cursor-pointer hover:bg-black hover:text-amber-100'>NYTHERIS</button>
-          <button className='parts py-3 px-2 bg-amber-100 cursor-pointer hover:bg-black hover:text-amber-100'>TALES</button>
+            className='parts py-3 px-2 text-black border-r bg-amber-100 border-b cursor-pointer hover:bg-black hover:text-amber-100'>NYTHERIS</button>
+          <button
+           onClick={() =>
+              gsap.to(window, {
+                duration: 1,
+                scrollTo: ".taleContainer",
+                ease: "power2.inOut",
+
+              })
+            }
+          className='parts py-3 px-2 text-black bg-amber-100 border-r border-b cursor-pointer hover:bg-black hover:text-amber-100'>TALES</button>
+
+                <button
+           onClick={() =>
+              gsap.to(window, {
+                duration: 1,
+                scrollTo: ".end",
+                ease: "power2.inOut",
+
+              })
+            }
+          className='parts text-black py-3 px-2 bg-amber-100 cursor-pointer border-b border-r hover:bg-black hover:text-amber-100'>END</button>
         </div>
+        
       </div>
       <Hero />
       <Fileds />

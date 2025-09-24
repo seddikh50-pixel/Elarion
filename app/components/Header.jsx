@@ -8,19 +8,19 @@ import { SplitText } from 'gsap/SplitText'
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Header = () => {
-    // useGSAP(() => {
-    //     gsap.from('.parts',{
-    //         x : -300,
-    //         ease : "circ",
-    //         duration : 1,
-    //         stagger : "0.5"
-    //     }
-    //     )
-    // })
+    useGSAP(() => {
+        gsap.from('.logo',{
+            x : 1000,
+            ease : "bounce",
+            duration : 1,
+            stagger : "0.5"
+        }
+        )
+    })
     return (
         <div className='fixed z-50  w-screen '>
             <div className='bars flex w-full justify-between '>
-                <div className='logo text-5xl pl-2 text-amber-100 font-extrabold '>ELARION</div>
+                <div className='logo text-5xl p-2 text-amber-100 font-extrabold  '>ELARION</div>
              
             </div>
         </div>

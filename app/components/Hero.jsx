@@ -20,18 +20,18 @@ const Hero = () => {
 
 
 
-        // const splitName = SplitText.create(".textname", {
-        //     type: "words, lines , chars",
-        //     mask: "lines",
-        //     linesClass: "line++",
-        // });
+        const splitName = SplitText.create(".textname", {
+            type: "words, lines , chars",
+            mask: "lines",
+            linesClass: "line++",
+        });
 
-        // gsap.from(splitName.chars, {
-        //     y: -600,
-        //     stagger: 0.1,
-        //     duration: 1,
-        //     ease: "bounce"
-        // })
+        gsap.from(splitName.chars, {
+            y: -600,
+            stagger: 0.1,
+            duration: 1,
+            ease: "bounce"
+        })
 
         const cloudsTimeLine = gsap.timeline({
             scrollTrigger: {
@@ -70,18 +70,18 @@ const Hero = () => {
 
     return (
         <div className='hero relative w-full h-full flex justify-center items-center overflow-hidden bg-amber-100 '>
-            <h1 className='textname z-2 text-[5vh] scale-30 sm:text-[14vh] md:text-[15vh] xl:text-[37vh] text-amber-100 uppercase font-bold '>نور الدين راك في زبي </h1>
+            <h1 className='textname z-2 text-[10vh] whitespace-nowrap scale-30 sm:text-[14vh] md:text-[15vh] xl:text-[37vh] text-amber-100 uppercase font-bold '>Elarion </h1>
             <div className='leftcloud absolute xl:w-full top-50 xl:-top-20 -left-80 md:w-200 md:h-200  w-150 h-96  xl:-left-200 xl:h-full z-3'>
-                <Image src={"/pnh.png"} className='object-cover' alt='fantasy' fill />
+                <Image src={"/pnh.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
             </div>
-            {/* <div className='rightcloud absolute xl:w-6/8 top-50 xl:top-20 -right-80 w-150 h-96 md:w-200 md:h-200  xl:-right-80 rotate-x-180   xl:h-full z-11'>
-                <Image src={"/pnh.png"} className='object-cover' alt='fantasy' fill />
-            </div> */}
+            <div className='rightcloud absolute xl:w-6/8 top-50 xl:top-20 -right-80 w-150 h-96 md:w-200 md:h-200  xl:-right-80 rotate-x-180   xl:h-full z-11'>
+                <Image src={"/pnh.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
+            </div>
             <div className=' absolute w-full h-full'>
-                <Image src={"/sd.jpg"} className='object-cover' alt='fantasy' fill />
+                <Image src={"/sd.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
             </div>
             <div className='island absolute xl:w-350 xl:h-250 w-100 h-70 md:w-300 md:h-200 md:top-84 top-64 z-10 xl:top-50 right-30 xl:right-130'>
-                <Image src={"/dd.png"} className='object-cover' alt='fantasy' fill />
+                <Image src={"/dd.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
             </div>
 
         </div>
