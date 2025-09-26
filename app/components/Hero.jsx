@@ -81,7 +81,7 @@ const Hero = () => {
                 <Image src={"/sd.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
             </div>
             <div className='island absolute xl:w-350 xl:h-250 w-100 h-70 md:w-300 md:h-200 md:top-84 top-64 z-10 xl:top-50 right-30 xl:right-130'>
-                <Image src={"/dd.webp"} className='object-cover' loading="lazy" alt='fantasy' fill />
+                <Image src={"/dd.webp"} priority className='object-cover' alt='fantasy' fill />
             </div>
 
         </div>
